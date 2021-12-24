@@ -1,8 +1,14 @@
-//get attribute
-//$("a").attr("href");
+//css(css property, value): used add css.takes two parameter css property; value
+$("h1").css("color", "red");
+$("h1").css("font-size", "3rem");
+$("h1").css("font-style", "italic");
 
-//remove attribute
-//$("a").removeAttr("href");
+//multiple css style using json
 
-//set attribute 
-$("a").attr("href", "http://facebook.com");
+$("p").css({"color":"black", "font-size": "5rem", "font-style": "bold"});
+
+//addClass():
+//$("h3").addClass("style");
+
+//add multiple class
+$("h3").addClass("style style2")
