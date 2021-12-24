@@ -1,14 +1,21 @@
-//css(css property, value): used add css.takes two parameter css property; value
-$("h1").css("color", "red");
-$("h1").css("font-size", "3rem");
-$("h1").css("font-style", "italic");
+//click(): attach a function to run when clicked event occurs.
+//$("button").click(()=>
+//    $("h1").text("you are clicked me")
+//);
 
-//multiple css style using json
+//toggleClass(): toggle b/w classes.
+//$("button").click( ()=>
+  //  $("h1").toggleClass("style")
+//);
 
-$("p").css({"color":"black", "font-size": "5rem", "font-style": "bold"});
+//adding event to multiple element
+$(".mybutton").click( function(){
+    var value = this.innerHTML;
+    $("h1").text(value + " is clicked");
+} )
 
-//addClass():
-//$("h3").addClass("style");
-
-//add multiple class
-$("h3").addClass("style style2")
+//on(): takes two parameter. an event and a function to run when event is clicked.
+$(".mybutton").on("mouseover", function(){
+    var value = this.innerHTML;
+    $("h1").text(value + " is clicked");
+})
