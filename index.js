@@ -1,21 +1,16 @@
-//click(): attach a function to run when clicked event occurs.
-//$("button").click(()=>
-//    $("h1").text("you are clicked me")
-//);
+$("#logInbutton").click(function(){
+  var password1 = $("#pass1").val();
+  var password2 = $("#pass2").val();
 
-//toggleClass(): toggle b/w classes.
-//$("button").click( ()=>
-  //  $("h1").toggleClass("style")
-//);
-
-//adding event to multiple element
-$(".mybutton").click( function(){
-    var value = this.innerHTML;
-    $("h1").text(value + " is clicked");
-} )
-
-//on(): takes two parameter. an event and a function to run when event is clicked.
-$(".mybutton").on("mouseover", function(){
-    var value = this.innerHTML;
-    $("h1").text(value + " is clicked");
-})
+  if(password1 != "" & password2 != ""){
+    if(password1 === password2){
+      alert("Successfully Loged In");
+    }
+    else{
+      alert("Password Missmatch");
+    }
+  }
+  else{
+    alert("please enter password");
+  }
+  });
